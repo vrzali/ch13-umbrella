@@ -13,7 +13,7 @@ A small e-commerce backend application built with MySQL to view, add and update 
 Type the following commands in your VS Code terminal: `npm init` `npm install inquirer` `npm install mysql2` `npm install sequelize`
 
 ## Usage
-Please press the link to watch the demo: 
+Please press the link to watch the demo: https://drive.google.com/file/d/1V4vbb_Kgql6YKua9EZB5QzbLNcjcSaah/view?usp=sharing
 ## License
 [![license](https://img.shields.io/badge/license-Open-blue)](https://shields.io)
 <br />
