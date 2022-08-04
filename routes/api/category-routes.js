@@ -50,7 +50,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
-  Category.create(req.body)
+  Category.create({
+    category_name: req.body.category_name
+  })
     .then((newCategory) => res.json(newCategory))
     .catch((err) => {
       console.log(err);
@@ -76,16 +78,16 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
-		where: {
-			id: req.params.id,
-		},
-	})
-	.then((deletedCategory) => {
-		res.json(`The category was removed from the database`);
-	})
-	.catch((err) => {
-		res.json(err);
-	});
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deletedCategory) => {
+      res.json(`The category was removed from the database`);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
 module.exports = router;
